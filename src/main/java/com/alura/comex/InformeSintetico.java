@@ -1,10 +1,12 @@
 package com.alura.comex;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.util.List;
 import java.util.Set;
+import java.util.HashSet;
+import java.util.Locale;
 
 public class InformeSintetico {
 
@@ -33,6 +35,7 @@ public class InformeSintetico {
         
         totalDeCategorias = categorias.size();
     }
+
     
     private void inicializarContadores() {
         totalDeProductosVendidos = 0;
@@ -73,34 +76,46 @@ public class InformeSintetico {
             pedidoMasCaro = pedidoActual;
         }
     }
+
+
+
+    // Los getters pueden mantenerse para casos donde se necesite acceder a los datos
+    // pero ya no son necesarios para la impresión del informe
+
     
     private void procesarCategoria(String categoria, Set<String> categorias) {
         categorias.add(categoria);
     }
 
-        public int getTotalDeProductosVendidos() {
-            return totalDeProductosVendidos;
-        }
+    public int getTotalDeProductosVendidos() {
+        return totalDeProductosVendidos;
+    }
 
-        public int getTotalDePedidosRealizados() {
-            return totalDePedidosRealizados;
-        }
+    public int getTotalDePedidosRealizados() {
+        return totalDePedidosRealizados;
+    }
 
-        public BigDecimal getMontoDeVentas() {
-            return montoDeVentas;
-        }
+    public BigDecimal getMontoDeVentas() {
+        return montoDeVentas;
+    }
 
-        public Pedido getPedidoMasBarato() {
-            return pedidoMasBarato;
-        }
+    public Pedido getPedidoMasBarato() {
+        return pedidoMasBarato;
+    }
 
-        public Pedido getPedidoMasCaro() {
-            return pedidoMasCaro;
-        }
+    public Pedido getPedidoMasCaro() {
+        return pedidoMasCaro;
+    }
 
-        public int getTotalDeCategorias() {
-            return totalDeCategorias;
-        }
+    public int getTotalDeCategorias() {
+        return totalDeCategorias;
+    }
+
+    public Object format(BigDecimal setScale) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'format'");
+    }
+
 
     
 
