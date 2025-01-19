@@ -14,6 +14,8 @@ public class Pedido {
 
     private LocalDate fecha;
 
+    private BigDecimal valorTotal;
+
     public Pedido(String categoria, String producto, String cliente, BigDecimal precio, int cantidad, LocalDate fecha) {
         this.categoria = categoria;
         this.producto = producto;
@@ -46,6 +48,21 @@ public class Pedido {
     public LocalDate getFecha() {
         return fecha;
     }
+
+
+    public BigDecimal getValorTotal() {
+            return valorTotal;
+
+    }
+    
+    public boolean isMasBaratoQue(Pedido otroPedido) {
+            return false;
+    }
+    
+    public boolean isMasCaroQue(Pedido otroPedido) {
+            return false;
+    }
+
 
     @Override
     public String toString() {
